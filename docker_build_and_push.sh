@@ -2,10 +2,10 @@
 
 # Build image
 docker build -t objectdetection-lambda .
-docker run -p 9000:8080 --env-file env_file.txt objectdetection-lambda
 
-# Test locally
-curl -X POST http://localhost:9000/2015-03-31/functions/function/invocations -d "{\"Records\":[{\"s3\":{\"bucket\":{\"name\":\"objectdetection-dev\"},\"object\":{\"key\":\"input-image-gasolinera.jpg\"}}}]} "
+# Test image locally
+# docker run -p 9000:8080 --env-file env_file.txt objectdetection-lambda
+# curl -X POST http://localhost:9000/2015-03-31/functions/function/invocations -d "{\"Records\":[{\"s3\":{\"bucket\":{\"name\":\"objectdetection-dev\"},\"object\":{\"key\":\"input-image-gasolinera.jpg\"}}}]} "
 
 # Create repository
 aws ecr create-repository --repository-name objectdetection --region eu-west-1
