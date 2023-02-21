@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "objectdetection-dev"
+        },
+        "object": {
+          "key": "input-image-gasolinera.jpg"
+        }
+      }
+    }
+  ]
+}
